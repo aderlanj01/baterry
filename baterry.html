@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="battery-level">Nível da Bateria: </p>
+    <script>
+        navigator.getBattery().then(function(battery) {
+            document.getElementById('battery-level').textContent = 'Nível da Bateria: ' + (battery.level * 100) + '%';
+        });
+    </script>
+</body>
+</html>
